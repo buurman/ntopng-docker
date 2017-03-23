@@ -1,9 +1,9 @@
-FROM ubuntu:14.04
-MAINTAINER Luca Deri <deri@ntop.org>
+FROM ubuntu:16.04
+MAINTAINER Buurman
 
 RUN apt-get update
 RUN apt-get -y -q install curl
-RUN curl -s --remote-name http://packages.ntop.org/apt/14.04/all/apt-ntop.deb
+RUN curl -s --remote-name http://packages.ntop.org/apt/16.04/all/apt-ntop.deb
 RUN sudo dpkg -i apt-ntop.deb
 RUN rm -rf apt-ntop.deb
 
